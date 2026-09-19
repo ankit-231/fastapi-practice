@@ -1,0 +1,71 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+bin/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments (Crucial for keeping local packages out of git)
+.venv/
+venv/
+ENV/
+env/
+ENV/
+*.venv
+
+# Environment variables and secrets (NEVER commit these!)
+.env
+.env.*
+!.env.example
+secrets.toml
+
+# FastAPI / Uvicorn / Gunicorn logs
+*.log
+log/
+logs/
+
+# Testing and Coverage
+.pytest_cache/
+.htmlcov/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+nosetests.xml
+tox.ini
+.tox/
+.nox/
+
+# Search and Indexing caches
+.cache/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
