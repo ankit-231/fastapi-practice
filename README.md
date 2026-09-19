@@ -7,3 +7,13 @@ I have another ecommerce project to do, but I don't want to reuse the same Djang
 Resources:
 
 - https://fastapi.tiangolo.com/tutorial/
+
+## Fast deployment using fastapicloud.com
+
+```sh
+uv run fastapi deploy
+```
+
+Deployed on:
+
+- https://fastapi-practice-8389a735.fastapicloud.dev/
