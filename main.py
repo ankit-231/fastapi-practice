@@ -11,8 +11,10 @@ async def root():
 
 
 @app.get("/items/{item_id}")
-async def read_item(item_id: int):
-    return {"item_id": item_id}
+async def read_item(item_id: int, q: str | None = None, short: bool = False):
+    if q:
+        return {"item_id": item_id, "q": q, "short": short}
+    return {"item_id": item_id, "short": short}
 
 
 @app.get("/users/me")
@@ -50,4 +52,12 @@ async def read_file(file_path: str):
     return {"file_path": file_path}
 
 
-# Next: https://fastapi.tiangolo.com/tutorial/query-params/
+# https://fastapi.tiangolo.com/tutorial/query-params/
+
+fake_items_db = [{"item_name": "Foo"}, {"item_name": "Bar"}, {"item_name": "Baz"}]
+
+
+# all the params to the function that are not in path parameter in url are interpreted as query params
+@app.get("/items/")
+async def read_items(skip: int = 0, limit: int = 10):
+    return fake_items_db[skip : skip + limit]
